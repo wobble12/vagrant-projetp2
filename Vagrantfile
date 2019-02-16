@@ -70,7 +70,7 @@ Vagrant.configure("2") do |config|
      wget -q https://packages.sury.org/php/apt.gpg -O- | sudo apt-key add -
      echo "deb https://packages.sury.org/php/ stretch main" | sudo tee /etc/apt/sources.list.d/php.list
      sudo apt-get update
-     sudo apt-get -y  install php7.2 php7.2-xml php7.2-zip php7.2-dev php-pear git composer
+     sudo apt-get -y  install php7.2 php7.2-xml php7.2-zip php7.2-dev php-pear git composer mongodb
      pecl channel-update pecl.php.net
      pecl install mongodb
      echo "extension=mongodb.so" | sudo tee -a /etc/php/7.2/cli/php.ini
