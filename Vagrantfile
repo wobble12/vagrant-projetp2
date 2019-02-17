@@ -44,7 +44,7 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "../projetp2code", "/var/www/html/lpdiwa", create: true
+  config.vm.synced_folder "../projetp2code", "/var/www/html/lpdiwa-p2-g1", create: true
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -75,5 +75,11 @@ Vagrant.configure("2") do |config|
      pecl install mongodb
      echo "extension=mongodb.so" | sudo tee -a /etc/php/7.2/cli/php.ini
      git config --global credential.helper "cache --timeout=25200"
+     systemctl enable mongodb
+     a2enmod rewrite
+     systemctl restart apache2
+     echo "POUR COMMENCER À TRAVAILLER, CONNECTEZ VOUS AVEC \"vagrant ssh\""
+     echo 'PUIS CLONEZ LE PROJET AVEC \"cd /var/www/html && sudo git clone https://github.com/IUT-LAVAL-MMI/1819-LPDIWA-P2-G1.git lpdiwa-p2-g1\"'
+     echo "Enfin, lancez \"sudo ./install.sh\""
    SHELL
 end
