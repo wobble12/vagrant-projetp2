@@ -4,6 +4,18 @@
 
 Vous devez avoir Virtualbox et Vagrant d'installés sur votre machine. (On rajoutera des versions minimales quand vous aurez testé et vu les bugs mouahahah)
 
+
+### Debian / Ubuntu
+
+Virtualbox
+-
+```sudo apt-get install virtualbox```
+
+Vagrant
+-
+Installation avec le fichier .deb [ici](https://www.vagrantup.com/downloads.html)
+
+
 ### Installation : 
 
 Une fois le dépôt cloné, naviguez dedans et lancez l'installation de la vm avec la commande `vagrant up`
