@@ -75,7 +75,8 @@ Vagrant.configure("2") do |config|
      pecl channel-update pecl.php.net
      pecl install mongodb
      echo "extension=mongodb.so" | sudo tee -a /etc/php/7.2/cli/php.ini
-     git config --global credential.helper "cache --timeout=25200"
+     su -c 'git config --global credential.helper "cache --timeout=25200"' vagrant
+     adduser vagrant www-data
      systemctl enable mongodb
      a2enmod rewrite
      systemctl restart apache2
