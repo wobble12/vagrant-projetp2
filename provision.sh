@@ -10,7 +10,7 @@ curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
 # Installation des paquets requis
 echo "Ajout des paquets requis"
 sudo apt-get update
-sudo apt-get -y  install php7.2 php7.2-xml php7.2-zip php7.2-dev php-pear git composer mongodb nodejs acl
+sudo apt-get -y  install php7.2 php7.2-xml php-xml php7.2-zip php7.2-dev php-pear git composer mongodb nodejs acl
 pecl channel-update pecl.php.net
 pecl install mongodb
 # Configuration des logiciels
