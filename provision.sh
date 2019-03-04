@@ -13,10 +13,12 @@ sudo apt-get update
 sudo apt-get -y  install php7.2 php7.2-xml php-xml php7.2-zip php7.2-dev php-pear git composer mongodb nodejs acl
 pecl channel-update pecl.php.net
 pecl install mongodb
+apt-get remove -y php7.3* php-pear
 # Configuration des logiciels
 echo "Configuration des logiciels"
 echo "extension=mongodb.so" | sudo tee -a /etc/php/7.2/cli/php.ini
 su -c 'git config --global credential.helper "cache --timeout=25200"' vagrant
+adduser vagrant www-data
 systemctl enable mongodb
 a2enmod rewrite
 systemctl restart apache2
