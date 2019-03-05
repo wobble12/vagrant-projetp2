@@ -23,5 +23,5 @@ systemctl enable mongodb
 a2enmod rewrite
 systemctl restart apache2
 echo "POUR COMMENCER À TRAVAILLER, CONNECTEZ VOUS AVEC \"vagrant ssh\""
-echo 'PUIS CLONEZ LE PROJET AVEC \"cd /var/www/html && sudo git clone https://github.com/IUT-LAVAL-MMI/1819-LPDIWA-P2-G1.git lpdiwa-p2-g1 && cd lpdiwa-p2-g1\"'
+echo 'PUIS CLONEZ LE PROJET AVEC \"sudo git clone https://github.com/IUT-LAVAL-MMI/1819-LPDIWA-P2-G1.git lpdiwa-p2-g1 && cd lpdiwa-p2-g1\"'
 echo "Enfin, lancez \"sudo ./install.sh\""
