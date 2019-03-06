@@ -22,6 +22,7 @@ adduser vagrant www-data
 systemctl enable mongodb
 a2enmod rewrite
 systemctl restart apache2
+mkdir /var/www/html/lpdiwa-p2-g1/var/{sessions,logs,cache}
 echo "POUR COMMENCER À TRAVAILLER, CONNECTEZ VOUS AVEC \"vagrant ssh\""
 echo 'PUIS CLONEZ LE PROJET AVEC \"sudo git clone https://github.com/IUT-LAVAL-MMI/1819-LPDIWA-P2-G1.git lpdiwa-p2-g1 && cd lpdiwa-p2-g1\"'
 echo "Enfin, lancez \"sudo ./install.sh\""
