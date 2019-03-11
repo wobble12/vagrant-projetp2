@@ -18,11 +18,11 @@ apt-get remove -y php7.3* php-pear
 echo "Configuration des logiciels"
 echo "extension=mongodb.so" | sudo tee -a /etc/php/7.2/cli/php.ini
 su -c 'git config --global credential.helper "cache --timeout=25200"' vagrant
-adduser vagrant www-data
 systemctl enable mongodb
 a2enmod rewrite
 systemctl restart apache2
-mkdir /var/www/html/lpdiwa-p2-g1/var/{sessions,logs,cache}
+mkdir /var/www/html/lpdiwa-p2-g1/var/{sessions,logs,cache} -p
+./fixperm.sh
 echo "POUR COMMENCER À TRAVAILLER, CONNECTEZ VOUS AVEC \"vagrant ssh\""
-echo 'PUIS CLONEZ LE PROJET AVEC \"sudo git clone https://github.com/IUT-LAVAL-MMI/1819-LPDIWA-P2-G1.git lpdiwa-p2-g1 && cd lpdiwa-p2-g1\"'
-echo "Enfin, lancez \"sudo ./install.sh\""
+echo 'PUIS CLONEZ LE PROJET AVEC "git clone https://github.com/IUT-LAVAL-MMI/1819-LPDIWA-P2-G1.git lpdiwa-p2-g1 && cd lpdiwa-p2-g1"'
+echo 'Enfin, lancez "sudo ./install.sh"'
